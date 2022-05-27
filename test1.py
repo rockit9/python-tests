@@ -7,7 +7,7 @@
 
 # Using 'requests' lib make a GET request and print response's body
 # Site for testing - https://randomuser.me/
-
+from pprint import pprint
 
 arr = [1,2,3,4,5,"Jack", "John", "Peter"]
 
@@ -27,5 +27,26 @@ def even_nbrs(array):
 
     return result
 
-print(even_nbrs(arr))
+# print(even_nbrs(arr))
 
+
+# import requests
+#
+# URL = 'https://randomuser.me/api/?format=json'
+#
+# r = requests.get(url=URL)
+#
+# data = r.json()
+# # pprint(r.content)
+# pprint(data)
+
+
+import requests
+
+URL = 'https://randomuser.me/api/?format=json'
+
+r = requests.get(url=URL)
+
+data = r.json()
+
+print(data)
